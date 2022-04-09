@@ -159,41 +159,39 @@ class SectionA{
 		return distinctWords;
 	}
 
-    private static void question6(String string) {
-        String[] words = new String[100]; 
-        String word = "", bigPalin="";  ;
-        int temp = 0, count = 0;  
-        for(int i = 0; i < string.length(); i++){  
-            if(string.charAt(i) != ' '){  
-                word = word + string.charAt(i);  
-            }  
-            else{  
-                words[temp] = word;  
-                temp++;  
-                word = "";  
-            }  
-        }
-        
-        for(int i = 0; i< temp; i++){  
-            if(isPalindrome(words[i])){  
-                count++;   
-                if(count == 1)  
-                   bigPalin = words[i];  
-                else{   
-                    if(bigPalin.length() < words[i].length())  
-                        bigPalin = words[i];  
-                }  
-            }  
-        }
-        if(count == 0)  
-            System.out.println("No palindrome found");  
-        else{  
-            System.out.println(bigPalin);  
-        }  
-        
-        
-    }
-
+  
+		static String longestPalin(String s){
+		int N= s.length();
+			if (N<=1){
+				return s;
+			}
+		String finalStr = s.charAt(e)+"";
+		int count=0;
+		for (int index=0; index<N;index++) {
+			String temp = s.charAt(index)+"":
+			for (int i=index+1;i‹N;i++){
+				temp+=s.charAt(i)+"":
+				if(isPalindrome(temp) && temp.length()›count){
+					finalstr= temp;
+					count = temp. length();
+				}
+			}
+		}
+		return finalstr;
+		}
+		private static boolean isPalindrome (String s){
+			StringBuilder sb= new StringBuilder(S);
+			sb.reverse();
+		}
+	
+	
+	
+	
+	
+	
+	
+	
+	
     public static void merge(char arr[], int first, int mid, int last)
     	{
     		//System.out.print("\nFirst: " + first + " Mid: " + mid + " Last: " + last);
